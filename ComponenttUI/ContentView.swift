@@ -33,22 +33,54 @@ struct ContentView: View {
 //            .shadow(color: .gray, radius: 10, x: 0, y: 10)
         
         // Own Image
-        Image("paris")
-            .resizable()
+//        Image("paris")
+//            .resizable()
 //            .ignoresSafeArea()
 //            .ignoresSafeArea(.container, edges: .top)
 //            .scaledToFit()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 300)
+//            .aspectRatio(contentMode: .fill)
+//            .frame(width: 300)
 //            .clipped()
-            .clipShape(Circle())
-            .opacity(0.5)
+//            .clipShape(Circle())
+//            .opacity(0.5)
+//            .overlay(
+//                Image(systemName: "heart.fill")
+//                    .font(.system(size: 50))
+//                    .foregroundColor(.red)
+//                    .opacity(0.5)
+//            )
+        
+        // Overlay with text
+        Image("paris")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 300)
             .overlay(
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 50))
-                    .foregroundColor(.red)
-                    .opacity(0.5)
+                
+//                Text("If you are lucky enough to have lived in Paris as a young man, then wherever you go for the rest of your life it stays with you, for Paris is a moveab le feast.\n\n- Ernest Hemingway")
+//                    .fontWeight(.heavy)
+//                    .font(.system(.headline, design: .rounded))
+//                    .foregroundColor(.white)
+//                    .padding()
+//                    .background(Color.black)
+//                    .cornerRadius(10)
+//                    .opacity(0.8)
+//                    .padding(),
+//                alignment: .top
+                Color.black
+                    .opacity(0.4)
+                    .overlay(
+                        Text("Paris")
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                            .foregroundColor(.white)
+                            .frame(width: 200)
+                    )
             )
+        
+        Image(systemName: "cloud.sun.rain")
+            .symbolRenderingMode(.palette)
+            .foregroundStyle(.yellow, .blue, .tertiary)
     }
 }
 
