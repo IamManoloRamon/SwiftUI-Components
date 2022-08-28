@@ -12,7 +12,8 @@ struct ComponenttUIApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            Layout()
+            //SwiftUIScrollView()
+            SwiftUIButton()
         }
     }
 }
