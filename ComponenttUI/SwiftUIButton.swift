@@ -49,10 +49,12 @@ struct SwiftUIButton: View {
                         .fontWeight(.semibold)
                         .font(.title)
                 }
+                .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
                 .foregroundColor(.white)
-                .background(.red)
+                .background(LinearGradient(gradient: Gradient(colors: [Color("DarkGreen"), Color("LightGreen")]), startPoint: .top, endPoint: .bottom))
                 .cornerRadius(40)
+                .padding(.horizontal, 20)
             }
             .padding()
             
@@ -68,8 +70,9 @@ struct SwiftUIButton: View {
                 })
                 .padding()
                 .foregroundColor(.white)
-                .background(Color.red)
+                .background(LinearGradient(gradient: Gradient(colors: [Color("DarkGreen"), Color("LightGreen")]), startPoint: .top, endPoint: .bottom))
                 .cornerRadius(40)
+                .shadow(color: .gray, radius: 5.0, x: 20, y: 10)
             }
         }
     }
